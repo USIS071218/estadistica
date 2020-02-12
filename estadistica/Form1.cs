@@ -35,7 +35,17 @@ namespace estadistica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lblrespuesta_serie.Text = objEstadistica.media(txtserie.Text.solit(' , '));     
+            lblrespuesta.Text = objEstadistica.media(txtserie.Text.solit(' , '));     
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            lblrespuesta.Text = "estandar=" + objEstadistica.estandar(txtserie.Text.Split(','));
+        }
+
+        private void btncalculartipica_Click(object sender, EventArgs e)
+        {
+            lblrespuesta.Text = "tipica=" + objEstadistica.tipica(txtserie.Text.Split(','));
         }
     }
 }
