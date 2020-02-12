@@ -12,6 +12,7 @@ namespace estadistica
 {
     public partial class Form1 : Form
     {
+        estadistica objEstadistica = new estadistica();
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace estadistica
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            lblrespuesta_serie.Text = objEstadistica.media(txtserie.Text.solit(' , '));     
         }
     }
 }
